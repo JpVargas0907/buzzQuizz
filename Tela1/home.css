@@ -1,0 +1,113 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #EC362D;
+    left: 0%;
+    top: 0%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header > .titulo {
+    color: #FFFFFF;
+    font-size: 37px;
+    font-weight: 700;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    align-items: center;
+}
+
+/* Quadro dos Quizzes criados pelo usuário */
+
+.criar-quizz{
+    width: 1050px;
+    height: 180px;
+    background-color: #FAFAFA;
+    border: 1px dashed #D5D5D5;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.criar-quizz > p {
+    color: #B9B9B9;
+    size: 20px;
+    margin-bottom: 15px;
+}
+
+.criar-quizz > button {
+    color: #EC362D;
+    border: 1px dashed #EC362D;
+    background: #FAFAFA;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Quadro com todos os Quizzes criados por usuários */
+
+.lista-quizzes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1050px;
+    height: 300px;
+    padding: 0;
+}
+
+.titulo-lista{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 12px 0px 12px 0px;
+    width: 100%;
+}
+
+.quizz{
+    position: relative;
+    width: 340px;
+    height: 180px;
+    list-style: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.quizz img {
+    width: 340px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.quizz > p {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    word-break: break-all;
+}
+
+/*Layout celular*/
+
+@media(max-width: 450px){
+
+}
