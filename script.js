@@ -1,3 +1,5 @@
+// Buscando e listando os quizzes no servidor
+
 let quizzes = []
 
 buscarDados()
