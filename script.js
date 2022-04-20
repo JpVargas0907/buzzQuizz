@@ -19,6 +19,7 @@ function renderQuizzes(){
     for(let i = 0; i <= listaQuizzes.clientHeight; i++){
         listaQuizzes.innerHTML += `
         <li class="quizz">
+        <div class="gradient"></div>
         <img src="${quizzes[i].image}" alt="">
         <p class="titulo-quizz">${quizzes[i].title}</p>
         </li>`
