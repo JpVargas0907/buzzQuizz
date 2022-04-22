@@ -1,0 +1,345 @@
+/* TELA 02 - RESPONDENDO UM QUIZZ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    overflow-x:hidden;
+    width: 100%;
+}
+
+header {
+    background-color: #EC362D;
+    width: 100%;
+    height: 69px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    z-index: 1;
+    top: 0px; 
+}
+
+header p {
+    text-align: center;
+    padding-top: 15px;
+}
+
+main {
+    background-color: #E5E5E5;;
+    width: 100%;
+}
+
+.titulo-quizz {
+    width: 100%;
+    height: 227px;
+    margin-top: 68px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57));
+}
+
+.titulo-quizz p {
+    text-align: center;
+    padding-top: 80px;
+}
+
+
+.perguntas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perguntas img {
+    object-fit: cover;
+}
+
+.pergunta-box {
+    background-color: #FFFFFF;
+    width: 759px;
+    height: 676px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 42px;
+    margin-bottom: 42px;
+    
+}
+
+.pergunta-box .topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 688px;
+    height: 138px;
+    margin-top: 27.91px;
+    margin-left: 36.43px;
+    margin-right: 36.43px;
+    margin-bottom: 20px;
+}
+
+.pergunta-box .pergunta-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 36.43px;
+    margin-right: 36.43px;
+}
+
+.pergunta-box .pergunta-flex h4 {
+    width: 330px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.resultado-quizz {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-quizz img {
+    object-fit: cover;
+}
+
+.resultado-box {
+    background-color: #FFFFFF;
+    width: 759px;
+    height: 430px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 42px;
+    margin-bottom: 42px;
+    
+}
+
+.resultado-box .topo {
+    background-color: #EC362D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 688px;
+    height: 99px;
+    margin-top: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+}
+
+.resultado-box .resultado-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 36.43px;
+    margin-right: 36.43px;
+}
+
+.resultado-box .resultado-flex p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer div {
+    background-color: #E5E5E5;;
+    height: 100px;
+}
+
+.titulo-quizz p {
+    font-family:  'Roboto', sans-serif;
+    font-size: 39px;
+    color: white;
+    font-weight: 400;
+}
+
+h3 {
+    font-family:  'Roboto', sans-serif;
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+}
+
+h4 {
+    font-family:  'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+
+/* RESULTADO DO QUIZZ - SÓ APARECE DEPOIS QUE TODAS AS PERGUNTAS FORAM RESPONDIDAS */
+
+.escondido {
+    display: none;
+}
+
+.resultado-quizz p {
+    font-family:  'Roboto', sans-serif;
+    font-size: 19px;
+    color: #484848;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: left;
+    margin-left: 21px;
+}
+
+.resultado-quizz button {
+    background-color: #EC362D;
+    width: 260.38px;
+    height: 52px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 10px;
+    font-family:  'Roboto', sans-serif;
+    font-size: 21px;
+    color: #FFFFFF;
+}
+
+.resultado-quizz .home h1 {
+    font-family:  'Roboto', sans-serif;
+    font-size: 21;
+    font-weight: 300;
+    color: #818181;
+    margin-top: 22px;
+}
+
+/* RESPOSTA CORRETA E FALSA */
+
+.resposta .correta h4 {
+    color: #009C22;
+}
+
+.resposta .falsa h4 {
+    color: #FF0B0B;
+    }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+    
+
+    main {
+        background-color: #E5E5E5;;
+        width: 100%;
+    }
+
+    .titulo-quizz {
+        width: 100%;
+        height: 142px;
+        margin-top: 68px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57));
+    }
+
+    .titulo-quizz p {
+        text-align: center;
+        font-size: 19px;
+        padding-top: 60px;
+    }
+
+    h3 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 19px;
+        color: white;
+        font-weight: 700;
+    }
+
+    .perguntas img {
+        width: 163px;
+        height: 113px;
+        object-fit: cover;
+    }
+    
+    .pergunta-box {
+        background-color: #FFFFFF;
+        width: 375px;
+        height: 436px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        margin-top: 31px;
+        margin-bottom: 31px;
+        
+    }
+    
+    .pergunta-box .topo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 340px;
+        height: 89px;
+        margin-top: 18px;
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-bottom: 13px;
+    }
+    
+    .pergunta-box .pergunta-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    
+    .pergunta-box .pergunta-flex h4 {
+        width: 163px;
+        margin-top: 5px;
+        margin-bottom: 14px;
+        font-size: 11px;
+    }
+
+
+
+
+.resultado-box {
+    width: 375px;
+    height: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 42px;
+    margin-bottom: 42px;
+    
+}
+
+.resultado-box .topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 99px;
+    margin-top: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+}
+
+.resultado-quizz img {
+    object-fit: cover;
+    width: 340px;
+    height: 255px;
+}
+
+.resultado-box .resultado-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 36.43px;
+    margin-right: 36.43px;
+}
+
+.resultado-box .resultado-flex .mensagemfinal {
+    width: 340px;
+    height: 96px;
+    margin-top: 9px;
+    margin-bottom: 14px;
+}
+
+.resultado-box .resultado-flex p {
+    font-size: 17px;
+    line-height: 19.92px;
+
+}
+
+}
+
+
+
