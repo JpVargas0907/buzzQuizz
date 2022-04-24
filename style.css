@@ -1,0 +1,267 @@
+/* CSS geral das páginas do QUIZZ */
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #EC362D;
+    left: 0%;
+    top: 0%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+header > .titulo {
+    color: #FFFFFF;
+    font-size: 37px;
+    font-weight: 700;
+}
+
+/* CSS TELA 1 */ 
+
+.tela1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Quadro dos Quizzes criados pelo usuário */
+
+.tela1 .criar-quizz{
+    width: 80%;
+    height: 180px;
+    background-color: #FAFAFA;
+    border: 1px dashed #D5D5D5;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.tela1 .criar-quizz > p {
+    color: #B9B9B9;
+    size: 20px;
+    margin-bottom: 15px;
+}
+
+.tela1 .criar-quizz > button {
+    color: #EC362D;
+    border: 1px dashed #EC362D;
+    background: #FAFAFA;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Quadro com todos os Quizzes criados por usuários */
+
+.tela1 .lista-quizzes{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    height: 300px;
+    padding: 0;
+}
+
+.tela1 .titulo-lista{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 12px 0px 12px 0px;
+    width: 100%;
+}
+
+.tela1 .quizz{
+    position: relative;
+    width: 330px;
+    height: 180px;
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+
+}
+
+.tela1 .gradient{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    position: absolute;
+    border-radius: 5px;
+}
+
+.tela1 .quizz > img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.tela1 .quizz > p {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    word-break: break-all;
+}
+
+/* CSS GERAL TELA 3*/
+
+.tela3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tela3 .titulo {
+    margin-top: 120px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.tela3 .subtitulo{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.tela3 input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #D1D1D1;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.tela3 button{
+    color: #FFF5F4;
+    background-color: #EC362D;
+    border-radius: 15px;
+    height: 54px;
+    width: 300px;
+    font-weight: 400;
+    font-size: 20px;
+    border-style: none;
+}
+
+.tela3 .conteudo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 25px 0px 100px 0px;
+}
+
+
+
+/* CSS TELA 3.1*/
+
+.tela3-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+/* CSS TELA 3.2 */
+
+.tela3-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tela3-2 .pergunta{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*CSS TELA 3.3*/
+
+.tela3-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*CSS TELA 3.4*/
+
+.tela3-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quizz-pronta .gradient{
+    height: 266px;
+    width: 500px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    position: absolute;
+    border-radius: 5px;
+}
+
+.quizz-pronta > img {
+    width: 500px;
+    height: 266px;
+    border-radius: 5px;
+}
+
+.quizz-pronta > p {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    word-break: break-all;
+}
+
+/*Layout celular*/
+
+@media(max-width: 650px){
+    /* Tela 1 */
+    .tela1 .criar-quizz{
+        width: 90%;
+    }
+
+    .tela1 .lista-quizzes{
+        width: 90%;
+    }
+
+    .tela1 .quizz{
+        width: 100%;
+    }
+
+    /* Tela 3*/
+
+    .tela3 .conteudo{
+        width: 100%;
+    }
+
+    .tela3 input {
+        width: 90%;
+    }
+}
