@@ -215,6 +215,10 @@ header > .titulo {
     align-items: center;
 }
 
+.tela3-4 .titulo{
+    margin-bottom: 46px;
+}
+
 .quizz-pronta .gradient{
     height: 266px;
     width: 500px;
@@ -237,6 +241,21 @@ header > .titulo {
     bottom: 8px;
     left: 18px;
     word-break: break-all;
+}
+
+.quizz-pronta{
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.tela3-4 button{
+    margin-bottom: 9px;
+}
+
+.tela3-4 .voltar-home{
+    font-weight: 400;
+    font-size: 20px;
+    color: #818181;
 }
 
 /*Layout celular*/
@@ -263,5 +282,27 @@ header > .titulo {
 
     .tela3 input {
         width: 90%;
+    }
+
+    .tela3 button{
+        width: 80%;
+    }
+
+    .quizz-pronta{
+        width: 100%;
+    }
+
+    .quizz-pronta .gradient{
+        height: 180px;
+        width: 100%;
+    }
+    
+    .quizz-pronta > img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .tela3-4 button {
+        width: 70%;
     }
 }
