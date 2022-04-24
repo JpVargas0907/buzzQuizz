@@ -34,8 +34,9 @@ main {
     width: 100%;
     height: 227px;
     margin-top: 68px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57));
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57));
 }
+
 
 .titulo-quizz p {
     text-align: center;
@@ -203,20 +204,26 @@ h4 {
     margin-top: 22px;
 }
 
-/* RESPOSTA CORRETA E FALSA */
+/* RESPOSTAS CORRETAS E FALSAS */
 
-.resposta .correta h4 {
-    color: #009C22;
+.pergunta-flex.ativar .resposta.correta h4 {
+color: green;
 }
 
-.resposta .falsa h4 {
-    color: #FF0B0B;
+.pergunta-flex.ativar .resposta.falsa h4 {
+    color: red;
     }
+
+    .pergunta-flex.ativar .resposta.falsa img {
+
+        -webkit-mask-image: linear-gradient( transparent 0%, white 60%)
+
+    }
+
 
 /* RESPONSIVIDADE */
 
 @media (max-width: 1100px) {
-    
 
     main {
         background-color: #E5E5E5;;
