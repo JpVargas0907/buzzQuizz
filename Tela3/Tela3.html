@@ -28,38 +28,10 @@
                 <input type="text" class="quantidade-perguntas" placeholder="Quantidade de perguntas do quizz">
                 <input type="text" class="quantidade-niveis" placeholder="Quantidade de níveis do quizz">
             </div>
-            <button class="quizz">Prosseguir pra criar perguntas</button>
+            <button onclick="createQuestions()" class="quizz">Prosseguir pra criar perguntas</button>
         </div>
         <div class="tela3-2">
             <p class="titulo">Crie suas perguntas</p>
-            <div class="conteudo">
-                <p class="subtitulo">Pergunta 1</p>
-                <input type="text" class="texto-pergunta" placeholder="Texto da pergunta">
-                <input type="text" class="cor-fundo" placeholder="Cor de fundo da pergunta">
-                <p class="subtitulo">Resposta correta</p>
-                <input type="text" class="resposta-correta" placeholder="Resposta correta">
-                <input type="text" class="url-imagem" placeholder="Quantidade de níveis do quizz">
-                <p class="subtitulo">Respostas incorretas</p>
-                <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 1">
-                <input type="text" class="resposta-incorreta" placeholder="URL da imagem 1">
-                <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 2">
-                <input type="text" class="resposta-incorreta" placeholder="URL da imagem 2">
-                <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 3">
-                <input type="text" class="resposta-incorreta" placeholder="URL da imagem 3">
-            </div>
-            <div class="conteudo">
-                <div class="pergunta">
-                    <p class="subtitulo">Pergunta 2</p>
-                    <ion-icon name="open-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="conteudo">
-                <div class="pergunta">
-                    <p class="subtitulo">Pergunta 3</p>
-                    <ion-icon name="open-outline"></ion-icon>
-                </div>
-            </div>
-            <button class="quizz">Prosseguir pra criar níveis</button>
         </div>
         <div class="tela3-3">
             <p class="titulo">Agora, decida os níveis</p>
@@ -95,6 +67,11 @@
             <p class="voltar-home">Voltar pra home</p>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./scriptTela3.js"></script>
 </body>
 
 </html>
