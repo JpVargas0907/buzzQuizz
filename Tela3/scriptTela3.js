@@ -1,5 +1,11 @@
 let qtdNiveis
 let qtdPerguntas
+let perguntas = []
+let pergunta = {
+    pergunta: "",
+    corFundo: "",
+    resposta: ""
+}
 
 document.querySelector(".tela3-2").style.display = "none"
 document.querySelector(".tela3-3").style.display = "none"
@@ -10,7 +16,7 @@ function isURL(s) {
     return regexp.test(s);
 }
 
-function createQuestions() {
+function carregarTelaCriarPerguntas() {
     qtdNiveis = document.querySelector(".tela3-1 .quantidade-niveis").value
     qtdPerguntas = document.querySelector(".tela3-1 .quantidade-perguntas").value
     let titulo = document.querySelector(".tela3-1 .titulo-quizz").value
@@ -21,15 +27,15 @@ function createQuestions() {
     if (titulo.length >= 20 && titulo.length <= 65 && isURL(url) && qtdPerguntas >= 3 && qtdNiveis >= 2) {
         document.querySelector(".tela3-1").style.display = "none"
         document.querySelector(".tela3-2").style.display = "flex"
-        renderCreatorQuestions();
+        carregarNumeroDePerguntas();
     } else {
         alert("Dados preenchidos de forma incorreta. Preencha novamente!")
     }
 }
 
-function renderCreatorQuestions() {
+function carregarNumeroDePerguntas() {
     for (let i = 0; i < qtdPerguntas; i++) {
-        const telaPerguntas = document.querySelector(".tela3-2");
+        const telaPerguntas = document.querySelector(".tela3-2 .perguntas");
         telaPerguntas.innerHTML += `
         <div class="conteudo">
         <p class="subtitulo">Pergunta ${i + 1}</p>
@@ -46,7 +52,17 @@ function renderCreatorQuestions() {
         <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 3">
         <input type="text" class="resposta-incorreta" placeholder="URL da imagem 3">
     </div>
-    <button class="quizz">Prosseguir pra criar níveis</button>
         ` ;
     };
+}
+
+// Funções para a tela 3.2
+
+function carregarTelaCriarNiveis(){
+
+    for(let i = 0; i < qtdPerguntas; i++){
+        
+    }
+
+    
 }

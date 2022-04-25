@@ -199,6 +199,10 @@ header > .titulo {
     justify-content: space-between;
 }
 
+.tela3-2 .perguntas {
+    width: 100%;
+}
+
 /*CSS TELA 3.3*/
 
 .tela3-3{
