@@ -189,5 +189,3 @@ function reiniciarQuizz(){
   carregarQuizz(ID_DO_QUIZZ)
   elemento.scrollIntoView(); 
 }
-
-

@@ -36,3 +36,7 @@ function renderQuizzes(quizzes){
     console.log(quizzes)
 }
 
+function abrirTela3(){
+    document.querySelector(".tela1").style.display = "none"
+    document.querySelector(".tela3-1").style.display = "flex"
+  }
