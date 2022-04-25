@@ -184,6 +184,7 @@ function voltarParaHome(){
 function reiniciarQuizz(){
   const elemento = document.querySelector(".titulo-quizz");
 
+  arrayTodasPerguntas = [];
   primeirasRespostas = [];
   resultadoQuizz.innerHTML = "";
   carregarQuizz(ID_DO_QUIZZ)
