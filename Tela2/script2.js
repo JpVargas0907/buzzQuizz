@@ -2,6 +2,7 @@
 
 const API = "https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes"
 let ID_DO_QUIZZ // O ID virá do quizz selecionado na Tela 1
+let resultadoQuizz = document.querySelector(".resultado-quizz");
 
 let quizzSelecionado ="";
 let arrayAnswers = [];
@@ -12,8 +13,6 @@ let acertos;
 
 function abrirQuizz(elemento){
     ID_DO_QUIZZ = elemento.innerHTML
-    console.log(elemento)
-
     carregarQuizz();
 
     document.querySelector(".tela1").style.display = "none"
@@ -114,6 +113,7 @@ function quizzVisivel () {
   if (primeirasRespostas.length !== arrayTodasPerguntas.length) { //se número de respostas selecionadas condiz com o de perguntas do quizz
     const proximaPergunta = document.querySelector(".proxima"); 
     proximaPergunta.scrollIntoView();
+    console.log(proximaPergunta)
   } else {
     setTimeout(exibirResultadoQuizz, 100);
 
@@ -146,8 +146,6 @@ acertos = 0
     
 }
 
-
-  let resultadoQuizz = document.querySelector(".resultado-quizz");
   resultadoQuizz.innerHTML = "";
 
   resultadoQuizz.innerHTML +=
@@ -167,9 +165,9 @@ acertos = 0
 
 </div>
 
-<button onclick="location.reload()">Reiniciar Quizz</button>
+<button onclick="reiniciarQuizz()">Reiniciar Quizz</button>
 
-<div class="home" onclick="paraHome()"><h1>Voltar para home</h1></div>
+<div class="home" onclick="voltarParaHome()"><h1>Voltar para home</h1></div>
 `
 
 const resultado = document.querySelector(".resultado-box"); 
@@ -178,8 +176,18 @@ resultado.scrollIntoView();
 }
 
 
-//function paraHome {
+function voltarParaHome(){
+  document.querySelector(".tela2").style.display = "none"
+  document.querySelector(".tela1").style.display = "flex"
+}
 
-//}
+function reiniciarQuizz(){
+  const elemento = document.querySelector(".titulo-quizz");
+
+  primeirasRespostas = [];
+  resultadoQuizz.innerHTML = "";
+  carregarQuizz(ID_DO_QUIZZ)
+  elemento.scrollIntoView(); 
+}
 
 
