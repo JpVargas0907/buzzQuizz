@@ -7,10 +7,6 @@ let pergunta = {
     resposta: ""
 }
 
-document.querySelector(".tela3-2").style.display = "none"
-document.querySelector(".tela3-3").style.display = "none"
-document.querySelector(".tela3-4").style.display = "none"
-
 function isURL(s) {
     let regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
     return regexp.test(s);

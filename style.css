@@ -96,6 +96,15 @@ header > .titulo {
 
 }
 
+.id{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
 .tela1 .gradient{
     height: 100%;
     width: 100%;

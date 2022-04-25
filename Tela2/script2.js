@@ -1,7 +1,7 @@
 // SCRIPT TELA 2
 
 const API = "https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes"
-const ID_DO_QUIZZ = "2" // O ID virá do quizz selecionado na Tela 1
+let ID_DO_QUIZZ // O ID virá do quizz selecionado na Tela 1
 
 let quizzSelecionado ="";
 let arrayAnswers = [];
@@ -10,14 +10,22 @@ let primeirasRespostas = [];
 let primeiraResposta;
 let acertos;
 
+function abrirQuizz(elemento){
+    ID_DO_QUIZZ = elemento.innerHTML
+    console.log(elemento)
 
-carregarQuizz();
+    carregarQuizz();
+
+    document.querySelector(".tela1").style.display = "none"
+    document.querySelector(".tela2").style.display = "block"
+}
 
 function comparador() {   // usado para embaralhar as respostas de cada pergunta
   return Math.random() - 0.5;
 }
 
 function carregarQuizz() {
+    console.log(ID_DO_QUIZZ)
     const promise = axios.get(`${API}/${ID_DO_QUIZZ}`);
     promise.then(renderizarQuizz);
   }
