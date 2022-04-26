@@ -44,6 +44,12 @@ main {
 }
 
 
+.titulo-quizz img {
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
 .perguntas {
     width: 100%;
     display: flex;
