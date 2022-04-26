@@ -1,11 +1,45 @@
 let qtdNiveis
 let qtdPerguntas
 let perguntas = []
-let pergunta = {
-    pergunta: "",
-    corFundo: "",
-    resposta: ""
+let quizz = {
+    title: "",
+    image: "",
+    questions: [{
+        title: "",
+        color: "",
+        answers: [{
+            text: "",
+            image: "",
+            isCorrectAnswer: ""
+        },
+        {
+            text: "",
+            image: "",
+            isCorrectAnswer: ""
+        }
+        ]
+    }
+    ],
+    levels: [
+        {
+            title: "Título do nível 1",
+			image: "https://http.cat/411.jpg",
+			text: "Descrição do nível 1",
+			minValue: 0
+        },
+        {
+            title: "Título do nível 1",
+			image: "https://http.cat/411.jpg",
+			text: "Descrição do nível 1",
+			minValue: 0
+        }
+    ]
 }
+
+let nodePergunta
+let nodeColor
+let nodeResposta
+let nodeImagem
 
 function isURL(s) {
     let regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
@@ -50,15 +84,17 @@ function carregarNumeroDePerguntas() {
     </div>
         ` ;
     };
+
+    nodePergunta = document.querySelectorAll(".texto-pergunta");
+    let nodeColor
+let nodeResposta
+let nodeImagem
 }
 
 // Funções para a tela 3.2
 
-function carregarTelaCriarNiveis(){
+function carregarTelaCriarNiveis() {
+    for(let i = 0; i <= qtdPerguntas; i++){
 
-    for(let i = 0; i < qtdPerguntas; i++){
-        
     }
-
-    
 }
