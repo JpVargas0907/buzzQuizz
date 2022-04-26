@@ -23,23 +23,23 @@ let quizz = {
     levels: [
         {
             title: "Título do nível 1",
-			image: "https://http.cat/411.jpg",
-			text: "Descrição do nível 1",
-			minValue: 0
+            image: "https://http.cat/411.jpg",
+            text: "Descrição do nível 1",
+            minValue: 0
         },
         {
             title: "Título do nível 1",
-			image: "https://http.cat/411.jpg",
-			text: "Descrição do nível 1",
-			minValue: 0
+            image: "https://http.cat/411.jpg",
+            text: "Descrição do nível 1",
+            minValue: 0
         }
     ]
 }
 
 let nodePergunta
 let nodeColor
-let nodeResposta
-let nodeImagem
+let nodeRespostas = []
+let nodeImagens = []
 
 function isURL(s) {
     let regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
@@ -72,29 +72,73 @@ function carregarNumeroDePerguntas() {
         <input type="text" class="texto-pergunta" placeholder="Texto da pergunta">
         <input type="text" class="cor-fundo" placeholder="Cor de fundo da pergunta">
         <p class="subtitulo">Resposta correta</p>
-        <input type="text" class="resposta-correta" placeholder="Resposta correta">
-        <input type="text" class="url-imagem" placeholder="Quantidade de níveis do quizz">
+        <input type="text" class="resposta${i}" placeholder="Resposta correta">
+        <input type="text" class="imagem${i}" placeholder="Quantidade de níveis do quizz">
         <p class="subtitulo">Respostas incorretas</p>
-        <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 1">
-        <input type="text" class="resposta-incorreta" placeholder="URL da imagem 1">
-        <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 2">
-        <input type="text" class="resposta-incorreta" placeholder="URL da imagem 2">
-        <input type="text" class="resposta-incorreta" placeholder="Resposta incorreta 3">
-        <input type="text" class="resposta-incorreta" placeholder="URL da imagem 3">
+        <input type="text" class="resposta${i}" placeholder="Resposta incorreta 1">
+        <input type="text" class="imagem${i}" placeholder="URL da imagem 1">
+        <input type="text" class="resposta${i}" placeholder="Resposta incorreta 2">
+        <input type="text" class="imagem${i}" placeholder="URL da imagem 2">
+        <input type="text" class="resposta${i}" placeholder="Resposta incorreta 3">
+        <input type="text" class="imagem${i}" placeholder="URL da imagem 3">
     </div>
         ` ;
+        nodeRespostas[i] = document.querySelectorAll(`.resposta${i}`)
+        nodeImagens[i] = document.querySelectorAll(`.imagem${i}`)
+        console.log(nodeRespostas[i]);
+        console.log(nodeImagens[i]);
     };
 
     nodePergunta = document.querySelectorAll(".texto-pergunta");
-    let nodeColor
-let nodeResposta
-let nodeImagem
+    nodeColor = document.querySelectorAll(".cor-fundo");
 }
 
 // Funções para a tela 3.2
 
-function carregarTelaCriarNiveis() {
-    for(let i = 0; i <= qtdPerguntas; i++){
 
+function carregarNumeroDeNiveis() {
+    for (let i = 0; i < qtdPerguntas; i++) {
+        const telaNiveis = document.querySelector(".tela3-3 .niveis");
+        telaNiveis.innerHTML += `
+        <div class="conteudo">
+                <p class="subtitulo">Nível ${i + 1}</p>
+                <input type="text" class="titulo-nivel" placeholder="Título do nível">
+                <input type="text" class="porcentagem" placeholder="% de acerto mínima">
+                <input type="text" class="url-imagem" placeholder="URL da imagem do nível">
+                <input type="text" class="descricao-nivel" placeholder="Descrição do nível">
+        </div>
+        ` ;
+    };
+
+}
+
+function isHexa(h){
+    let regexp = /#[0-9A-Fa-f]{6}/g
+    return regexp.test(h);
+}
+
+function carregarTelaCriarNiveis() {
+    let pergunta 
+    let validador = 0 
+    let i
+
+    console.log(nodeRespostas[0].item(0))
+
+    for (i = 0; i < qtdPerguntas; i++) {
+        pergunta = nodePergunta.item(i).value;
+
+        if(pergunta.length > 20  && isHexa(nodeColor.item(i).value) && nodeRespostas[0].item(i) !== "" && nodeRespostas[1].item(i).value !== ""){
+            validador ++
+            
+        } 
     }
+
+    if(validador === i){
+        document.querySelector(".tela3-2").style.display = "none"
+        document.querySelector(".tela3-3").style.display = "flex"
+        carregarNumeroDeNiveis();
+    } else {
+        alert("Dados preenchidos de forma incorreta. Preencha novamente!")
+    }
+
 }
