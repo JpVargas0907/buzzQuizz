@@ -85,8 +85,6 @@ function carregarNumeroDePerguntas() {
         ` ;
         nodeRespostas[i] = document.querySelectorAll(`.resposta${i}`)
         nodeImagens[i] = document.querySelectorAll(`.imagem${i}`)
-        console.log(nodeRespostas[i]);
-        console.log(nodeImagens[i]);
     };
 
     nodePergunta = document.querySelectorAll(".texto-pergunta");
@@ -118,17 +116,15 @@ function isHexa(h){
 }
 
 function carregarTelaCriarNiveis() {
-    let pergunta 
-    let validador = 0 
-    let i
-
-    console.log(nodeRespostas[0].item(0))
+    let pergunta;
+    let validador = 0;
+    let i;
 
     for (i = 0; i < qtdPerguntas; i++) {
         pergunta = nodePergunta.item(i).value;
 
         if(pergunta.length > 20  && isHexa(nodeColor.item(i).value) && nodeRespostas[0].item(i) !== "" && nodeRespostas[1].item(i).value !== ""){
-            validador ++
+            validador ++;
             
         } 
     }
