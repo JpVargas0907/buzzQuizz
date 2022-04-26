@@ -1,7 +1,7 @@
 // SCRIPT TELA 2
 
 const API = "https://mock-api.driven.com.br/api/v6/buzzquizz/quizzes"
-let ID_DO_QUIZZ // O ID virá do quizz selecionado na Tela 1
+let ID_DO_QUIZZ 
 let resultadoQuizz = document.querySelector(".resultado-quizz");
 
 let quizzSelecionado ="";
@@ -19,12 +19,12 @@ function abrirQuizz(elemento){
     document.querySelector(".tela2").style.display = "block"
 }
 
-function comparador() {   // usado para embaralhar as respostas de cada pergunta
+function comparador() {   
   return Math.random() - 0.5;
 }
 
 function carregarQuizz() {
-    console.log(ID_DO_QUIZZ)
+    
     const promise = axios.get(`${API}/${ID_DO_QUIZZ}`);
     promise.then(renderizarQuizz);
   }
@@ -35,13 +35,13 @@ function renderizarQuizz(response) {
     tituloQuizz.innerHTML = quizzSelecionado.title;
     imagemQuizz = quizzSelecionado.image;
     document.querySelector(".titulo-quizz").style.backgroundImage = "url(" + `${imagemQuizz}` + ")";
-    //adicionar opacidade com preto na imagem
+  
 
       
     const containerPerguntas = document.querySelector(".perguntas");
     containerPerguntas.innerHTML = "";
 
-      for(let i = 0; i < quizzSelecionado.questions.length; i++) { // adicionando as perguntas no display
+      for(let i = 0; i < quizzSelecionado.questions.length; i++) { 
         const tituloPergunta = quizzSelecionado.questions[i].title;
         const tituloCor = quizzSelecionado.questions[i].color;
 
@@ -55,11 +55,11 @@ function renderizarQuizz(response) {
         </div> `
 
         arrayAnswers = quizzSelecionado.questions[i].answers;
-        arrayAnswers = arrayAnswers.sort(comparador); // embaralhando as respostas da pergunta ídice "i"
+        arrayAnswers = arrayAnswers.sort(comparador); 
         // array para usar nas próximas funções:
         arrayTodasPerguntas.push(arrayAnswers);
 
-        for(let j = 0; j < arrayAnswers.length; j++) { // adicionando as respostas no display
+        for(let j = 0; j < arrayAnswers.length; j++) { 
             const containerPerguntaFlex = document.querySelector(".perguntas").lastElementChild.lastElementChild;
             const tituloResposta = arrayAnswers[j].text;
             const imagemResposta = arrayAnswers[j].image;
@@ -96,24 +96,24 @@ function renderizarQuizz(response) {
 function selecionarResposta (respostaClicada) {
 
   if(respostaClicada.parentNode.classList.contains("ativar") === false) {
-      respostaClicada.parentNode.classList.add("ativar"); // aciona o css de resposta "correta" ou "falsa"
-      respostaClicada.parentNode.parentNode.classList.remove("proxima"); // remove esta classe para o scrollIntoView ir para proxima pergunta
+      respostaClicada.parentNode.classList.add("ativar"); 
+      respostaClicada.parentNode.parentNode.classList.remove("proxima"); 
 
       primeiraResposta = respostaClicada;
-      primeirasRespostas.push(primeiraResposta); // esse array de respostas selecionadas vai ser usado para calcular a pontuação
+      primeirasRespostas.push(primeiraResposta); 
       setTimeout(quizzVisivel, 2000); 
 
-  }  else if (respostaClicada.classList.contains("ativar")) { // para não trocar de resposta selecionada
+  }  else if (respostaClicada.classList.contains("ativar")) { 
   return;
 }
 
 }
 
 function quizzVisivel () {
-  if (primeirasRespostas.length !== arrayTodasPerguntas.length) { //se número de respostas selecionadas condiz com o de perguntas do quizz
+  if (primeirasRespostas.length !== arrayTodasPerguntas.length) { 
     const proximaPergunta = document.querySelector(".proxima"); 
     proximaPergunta.scrollIntoView();
-    console.log(proximaPergunta)
+    
   } else {
     setTimeout(exibirResultadoQuizz, 100);
 
@@ -195,21 +195,3 @@ function reiniciarQuizz(){
 
 
 
-// ESTRUTURA HTML DA TELA 3-2
-
-
-
-
-
-
-// PREENCHENDO O OBJETO PARA ENVIAR O POST AO SERVIDOR
-
-// const quantidadePerguntas = document.querySelector(".quantidade-perguntas").innerHTML;
-// let arrayQuestions3 = document.querySelectorAll(".question"); // array de divs 
-// let arrayAnswers3 = document.querySelectorAll(".answer"); 
-
-// //depende de como colocar o HTML dos inputs na tela 3-2
-
-// for(let i = 0; i < quantidadePerguntas; i++) {
-// //</div>tem que colocar o array de "answers" dentro do array de cada resposta "question"
-// }
