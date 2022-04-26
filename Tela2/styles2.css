@@ -238,6 +238,11 @@ color: green;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57));
     }
 
+    .titulo-quizz img {
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+
     .titulo-quizz p {
         text-align: center;
         font-size: 19px;
