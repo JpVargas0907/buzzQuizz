@@ -190,3 +190,26 @@ function reiniciarQuizz(){
   carregarQuizz(ID_DO_QUIZZ)
   elemento.scrollIntoView(); 
 }
+
+
+
+
+
+// ESTRUTURA HTML DA TELA 3-2
+
+
+
+
+
+
+// PREENCHENDO O OBJETO PARA ENVIAR O POST AO SERVIDOR
+
+// const quantidadePerguntas = document.querySelector(".quantidade-perguntas").innerHTML;
+// let arrayQuestions3 = document.querySelectorAll(".question"); // array de divs 
+// let arrayAnswers3 = document.querySelectorAll(".answer"); 
+
+// //depende de como colocar o HTML dos inputs na tela 3-2
+
+// for(let i = 0; i < quantidadePerguntas; i++) {
+// //</div>tem que colocar o array de "answers" dentro do array de cada resposta "question"
+// }
